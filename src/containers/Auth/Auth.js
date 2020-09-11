@@ -5,6 +5,35 @@ import Input from '../../components/UI/Input/Input'
 
 export default class Auth extends Component {
 
+  state = {
+    formControls: {
+      email: {
+        value: '',
+        type: 'email',
+        label: 'Email',
+        errorMessage: 'Введите корректный email',
+        valid: false,
+        touched: false,
+        validalion: {
+          required: true,
+          email: true
+        }
+      },
+      password: {
+        value: '',
+        type: 'password',
+        label: 'Password',
+        errorMessage: 'Введите верный пароль',
+        valid: false,
+        touched: false,
+        validalion: {
+          required: true,
+          minLength: 6
+        }
+      }
+    }
+  }  
+
   loginHandler = () => {
 
   }
